@@ -28,7 +28,7 @@ public class StockPriceAlarmService {
     private NotificationService notificationService;
 
     @Transactional
-//    @Scheduled(fixedRateString = "${stocks.fetch.interval.in.milis}")
+    @Scheduled(fixedRateString = "${stocks.fetch.interval.in.milis}")
     public void runJob()  {
         List<Alarm> activeAlarms = alarmRepository.findByActive(true);
         Set<String> uniqueStockNames = activeAlarms.stream().map(a -> a.getStockName()).collect(Collectors.toSet());
