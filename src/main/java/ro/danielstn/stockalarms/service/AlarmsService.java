@@ -1,6 +1,5 @@
 package ro.danielstn.stockalarms.service;
 
-import org.omg.SendingContext.RunTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ro.danielstn.stockalarms.datasource.Alarm;

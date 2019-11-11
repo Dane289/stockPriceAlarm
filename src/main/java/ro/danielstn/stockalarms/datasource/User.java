@@ -7,13 +7,12 @@ import java.util.Set;
 @Table(name = "users")
 public class User {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
-
-//    private Set<Alarm> alarms;
 
     private String name;
     private String email;
+    private String password;
 
     public long getId() {
         return id;
@@ -45,5 +44,14 @@ public class User {
     public User setEmail(String email) {
         this.email = email;
         return this;
+    }
+
+    public User setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+
+    public String getPassword() {
+        return password;
     }
 }
